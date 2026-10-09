@@ -1,0 +1,527 @@
+import portfolio_game_base_module_for_101324244 as my_library
+
+
+my_library.open_surf("The Red Cross",800,500)
+
+my_library.fill_surf(84,16,18)
+
+my_library.draw_text("The Red Cross", 180,(18,83,89) )
+
+my_library.draw_rect( (200,130,400,100), (29,43,83), 3)
+
+# Top-Left Corner
+my_library.draw_line((210, 140), (225, 140), (255, 255, 255), 4) 
+my_library.draw_line((210, 140), (210, 155), (255, 255, 255), 4) 
+
+# Top-Right Corner
+my_library.draw_line((590, 140), (575, 140), (255, 255, 255), 4) 
+my_library.draw_line((590, 140), (590, 155), (255, 255, 255), 4) 
+
+# Bottom-Left Corner
+my_library.draw_line((210, 220), (225, 220), (255, 255, 255), 4) 
+
+my_library.draw_line((210, 220), (210, 205), (255, 255, 255), 4) 
+
+# Bottom-Right Corner
+my_library.draw_line((590, 220), (575, 220), (255, 255, 255), 4) 
+
+my_library.draw_line((590, 220), (590, 205), (255, 255, 255), 4) 
+
+# Top-Left Corner (Outer and Inner accents)
+my_library.draw_line((210, 140), (230, 140), (255, 255, 255), 4) 
+my_library.draw_line((210, 140), (210, 160), (255, 255, 255), 4) 
+my_library.draw_line((220, 150), (230, 150), (255, 255, 255), 4) 
+my_library.draw_line((220, 150), (220, 160), (255, 255, 255), 4) 
+
+# Top-Right Corner (Outer and Inner accents)
+my_library.draw_line((590, 140), (570, 140), (255, 255, 255), 4) 
+my_library.draw_line((590, 140), (590, 160), (255, 255, 255), 4) 
+my_library.draw_line((580, 150), (570, 150), (255, 255, 255), 4) 
+my_library.draw_line((580, 150), (580, 160), (255, 255, 255), 4)
+
+# Bottom-Left Corner (Outer and Inner accents)
+my_library.draw_line((210, 220), (230, 220), (255, 255, 255), 4) 
+my_library.draw_line((210, 220), (210, 200), (255, 255, 255), 4) 
+my_library.draw_line((220, 210), (230, 210), (255, 255, 255), 4) 
+my_library.draw_line((220, 210), (220, 200), (255, 255, 255), 4) 
+
+# Bottom-Right Corner (Outer and Inner accents)
+my_library.draw_line((590, 220), (570, 220), (255, 255, 255), 4) 
+my_library.draw_line((590, 220), (590, 200), (255, 255, 255), 4) 
+my_library.draw_line((580, 210), (570, 210), (255, 255, 255), 4) 
+my_library.draw_line((580, 210), (580, 200), (255, 255, 255), 4) 
+
+# Get names for the five party members
+member1 = input("Enter the name of party member 1: ")
+print("Member 1 has been registered as:", member1)
+
+member2 = input("Enter the name of party member 2: ")
+member3 = input("Enter the name of party member 3: ")
+member4 = input("Enter the name of party member 4: ")
+member5 = input("Enter the name of party member 5: ")
+
+account_balance = 101324244
+
+print("There are 200 bandages available. One bandage goes for $4")
+
+total_bandage = int(input("How many units of bandage would you like?: "))
+
+bandage_unit_cost = 4
+account_balance = account_balance - (total_bandage * bandage_unit_cost)
+print(f"Balance so far: {account_balance}")
+
+print("There are 250 vaselines available. One vaseline goes for $2")
+
+total_vaseline = int(input("How many units of vaseline would you like?: "))
+
+vaseline_unit_cost = 2
+account_balance = account_balance - (total_vaseline * vaseline_unit_cost)
+print(f"Balance so far: {account_balance}")
+
+
+print("There are 50 spirit bottles available. One bottle goes for $5")
+
+total_spirit = int(input("How many units of spirit would you like?: "))
+
+spirit_unit_cost = 5
+account_balance = account_balance - (total_spirit * spirit_unit_cost)
+print(f"Balance so far: {account_balance}")
+
+
+print("There are 150 packs of painkillers available. One pack goes for $3")
+
+total_painkillers = int(input("How many units of painkillers would you like?: "))
+
+painkillers_unit_cost = 3
+account_balance = account_balance - (total_painkillers * painkillers_unit_cost)
+print(f"Balance so far: {account_balance}")
+
+
+print("There are 100 packs of gauze available. One pack goes for $3")
+
+total_gauze = int(input("How many units of gauze would you like?: "))
+
+gauze_unit_cost = 3
+account_balance = account_balance - (total_gauze * gauze_unit_cost)
+print(f"Balance so far: {account_balance}")
+
+#Asking user if they would like a game description.
+
+game_narrative = input("Would you like to know more about the story of The Red Cross? ")
+
+if game_narrative.lower() == "yes":
+	print("The Red Cross is an educational game designed to teach people about first-aid.")
+elif game_narrative.lower() == "no":
+	print("Ok, moving on...")
+else:
+    print("Wrong syntax, answer yes or no")
+
+#ask again
+    game_narrative_1 = input("Would you like to know more about the story of The Red Cross? ")
+
+    
+    if game_narrative_1.lower() == "yes":
+        print("The Red Cross is an educational game designed to teach people about first-aid.")
+    elif game_narrative_1.lower() == "no":
+        print("Ok, moving on...")
+    else:
+      print("Wrong syntax, goodbye.")
+    exit()
+
+
+#Picking a departure day.
+
+statement_1 = "You have four possible days to leave between the months of March and July."
+
+print(statement_1)
+
+statement_2 = "Your days are\n1.) March 12th\n2.) May 24th\n3.) June 5th\n4.) July 30th"
+
+print(statement_2)
+
+statement_3 = input("Would you like me to explain the differences between these days? ")
+
+
+
+if statement_3.lower() == "yes":
+	print("The date in March is a period where the weather gets a little windy and rainy. May is generally a hot month while June and July are months that are hot and busy with people which also means there are more people to possibly treat.")
+
+elif statement_3.lower() == "no":
+	print("Moving on...")
+else:
+   print(f"Wrong syntax.")
+#ask again
+
+   statement_4 = input("Would you like me to explain the differences between these days? ")
+
+
+   if statement_4.lower() == "yes":
+        print("The date in March is a period where the weather gets a little windy and rainy. May is generally a hot month while June and July are months that are hot and busy with people which also means there are more people to possibly treat.")
+
+   elif statement_4.lower() == "no":
+        print("Moving on...")
+   else:
+      print(f"Wrong syntax.")
+      exit()
+	
+
+departure_date = input("When would you like to embark on your journey? ")
+
+if departure_date.lower() == "march 12th":
+	print("March 12th it is!")
+elif departure_date.lower() == "may 24th":
+	print("May 24th it is!")
+elif departure_date.lower() == "june 5th":
+	print("June 5th it is!")
+elif departure_date.lower() == "july 30th":
+	print("June 5th it is!")
+else:
+    print(f"Wrong syntax.")
+    #ask again
+    departure_date_1 = input("When would you like to embark on your journey? ")
+    if departure_date.lower() == "march 12th":
+    	print("March 12th it is!")
+    elif departure_date.lower() == "may 24th":
+        print("May 24th it is!")
+    elif departure_date.lower() == "june 5th":
+        print("June 5th it is!")
+    elif departure_date.lower() == "july 30th":
+        print("July 30th it is!") # Note: I fixed this text, it used to say June 5th
+    else:
+        print(f"Wrong syntax.")
+    exit()
+
+#Picking a character.
+
+character_option = "You have the option to be one of three characters during your journey. You may:\n1.) Be a Nurse\n2.) Be a Driver\n3.) Be an Assistant."
+
+print(character_option)
+
+character_difference = input("Would you like me to brief you on the roles of each character? ")
+
+if character_difference.lower() == "yes":
+    print("A nurse is the character who handles most the first-aid treatment and gets a budget of $350, a driver gets the crew up and down the area and gets a budget of $200 while an assistant is there to help out with anything that requires help and gets a budget of $100 while also learning the job first hand.")
+
+elif character_difference.lower() == "no":
+    print("Very well, moving on...")
+
+else:
+    print(f"Wrong syntax. Answer yes or no.")
+    #ask again
+    character_difference_1 = input("Would you like me to brief you on the roles of each character? ")
+
+    if character_difference_1.lower() == "yes":
+        print("A nurse is the character who handles most the first-aid treatment and gets a budget of $350, a driver gets the crew up and down the area and gets a budget of $200 while an assistant is there to help out with anything that requires help and gets a budget of $100 while also learning the job first hand.")
+
+    elif character_difference_1.lower() == "no":
+        print("Very well, moving on...")
+
+    else:
+       print(f"Wrong syntax.")
+       exit()
+
+
+	
+
+character_class = input("What character would you like to be? ")
+
+
+if character_class.lower() == "nurse" :
+	account_balance = 350
+	print(f"You are officially a nurse and your new balance is 	${account_balance}.")
+elif character_class.lower() == "driver" :
+	account_balance = 200
+	print(f"You are officially a driver and your new balance is${account_balance}.")
+elif character_class.lower() == "assistant" :
+	account_balance = 100
+	print(f"You are officially an assistant and your new balance is ${account_balance}.")
+else:
+    print(f"Wrong syntax.")
+    #ask again
+    character_class_1 = input("What character would you like to be? ")
+
+    if character_class_1.lower() == "nurse" :
+           account_balance = 350
+           print(f"You are officially a nurse and your new balance is 	${account_balance}.")
+    elif character_class_1.lower() == "driver" :
+           account_balance = 200
+           print(f"You are officially a driver and your new balance is 	${account_balance}.")
+    elif character_class_1.lower() == "assistant" :
+           account_balance = 100
+           print(f"You are officially an assistant and your new balance is ${account_balance}.")
+    else:
+       print("Wrong syntax again. Program ending.")
+       exit()
+
+
+	
+
+#Picking a starting location for the player.
+
+starting_location = "You have the option to start in one of four locations at the start of your journey. You may start at:\n1.) Lagos\n2.) Abuja\n3.) Port-Harcourt\n4.) Enugu."
+
+print(starting_location)
+
+location_difference = input("Would you like me to brief you on the difference between each location? ")
+
+
+if location_difference.lower() == "yes":
+	print("Lagos is a very busy city with lots of people to attend to which can be very tasking. Port-Harcourt is a developing city near the ports and people might be prone to more water-borne diseases than other diseases. Abuja is a more reserved city with a more beautiful scenery than the rest while Enugu is the least populated of the four.")
+
+elif location_difference.lower() == "no":
+	print("Very well, moving on...")
+
+else:
+   print(f"Wrong syntax.")
+   #ask again
+
+   location_difference_1 = input("Would you like me to brief you on the difference between each location? ")
+
+
+   if location_difference_1.lower() == "yes":
+	   print("Lagos is a very busy city with lots of people to attend to which can be very tasking. Port-Harcourt is a developing city near the ports and people might be prone to more water-borne diseases than other diseases. Abuja is a more reserved city with a more beautiful scenery than the rest while Enugu is the least populated of the four.")
+
+   elif location_difference_1.lower() == "no":
+	   print("Very well, moving on...")
+
+   else:
+     print(f"Wrong syntax.")
+     exit()
+	
+
+location_choice = input("Where would you like to begin your journey? ")
+
+
+if location_choice.lower() == "lagos":
+        print("Your journey will begin in Lagos.")
+elif location_choice.lower() == "abuja":
+        print("Your journey will begin in Abuja.")
+elif location_choice.lower() == "port-harcourt":
+        print("Your journey will begin in Port-Harcourt.")
+elif location_choice.lower() == "enugu":
+        print("Your journey will begin in Enugu.")
+
+else:
+    print(f"Wrong syntax.")
+    #ask again
+
+    location_choice_1 = input("Where would you like to begin your journey? ")
+
+    if location_choice_1.lower() == "lagos":
+           print("Your journey will begin in Lagos.")
+    elif location_choice_1.lower() == "abuja":
+           print("Your journey will begin in Abuja.")
+    elif location_choice_1.lower() == "port-harcourt":
+           print("Your journey will begin in Port-Harcourt.")
+    elif location_choice_1.lower() == "enugu":
+           print("Your journey will begin in Enugu.")
+
+    else:
+       print(f"Wrong syntax.")
+       exit()
+	
+
+print("There are 200 bandages available. One bandage goes for $4")
+
+total_bandage = int(input("How many units of bandage would you like?: "))
+
+bandage_unit_cost = 4
+total_bandage_cost = total_bandage * bandage_unit_cost
+
+
+if total_bandage_cost <= account_balance:
+	account_balance = account_balance - total_bandage_cost
+	print(f"Balance so far: {account_balance}")
+else:
+	print(f"Sorry, your funds are insufficient. Your balance is still {account_balance}")
+
+	#ask again
+
+	total_bandage_1 = int(input("How many units of bandage would you like?: "))
+
+	bandage_unit_cost = 4
+	total_bandage_cost = total_bandage_1 * bandage_unit_cost
+
+
+	if total_bandage_cost <= account_balance:
+		account_balance = account_balance - total_bandage_cost
+		print(f"Balance so far: {account_balance}")
+	else:
+		print(f"Sorry, your funds are insufficient. Your balance is still {account_balance}")
+		exit()
+    
+
+print("There are 250 vaselines available. One vaseline goes for $2")
+
+total_vaseline = int(input("How many units of vaseline would you like?: "))
+
+vaseline_unit_cost = 2
+total_vaseline_cost = total_vaseline * vaseline_unit_cost
+
+if total_vaseline_cost <= account_balance:
+        account_balance = account_balance - total_vaseline_cost
+        print(f"Balance so far: {account_balance}")
+else:
+    print(f"Sorry, your funds are insufficient. Your balance is still {account_balance}")
+
+    #ask again
+    total_vaseline_1 = int(input("How many units of vaseline would you like?: "))
+
+    vaseline_unit_cost = 2
+    total_vaseline_cost = total_vaseline_1 * vaseline_unit_cost
+
+    if total_vaseline_cost <= account_balance:
+           account_balance = account_balance - total_vaseline_cost
+           print(f"Balance so far: {account_balance}")
+    else:
+       print(f"Sorry, your funds are insufficient. Your balance is still {account_balance}")
+       exit()
+    
+
+
+
+
+print("There are 50 spirit bottles available. One bottle goes for $5")
+
+total_spirit = int(input("How many units of spirit would you like?: "))
+
+spirit_unit_cost = 5
+total_spirit_cost = total_spirit * spirit_unit_cost
+
+if total_spirit_cost <= account_balance:
+        account_balance = account_balance - total_spirit_cost
+        print(f"Balance so far: {account_balance}")
+else:
+    print(f"Sorry, your funds are insufficient. Your balance is still {account_balance}")
+
+
+    #ask again
+    total_spirit_1 = int(input("How many units of spirit would you like?: "))
+
+    spirit_unit_cost = 5
+    total_spirit_cost = total_spirit * spirit_unit_cost
+
+    if total_spirit_cost <= account_balance:
+           account_balance = account_balance - total_spirit_cost
+           print(f"Balance so far: {account_balance}")
+    else:
+       print(f"Sorry, your funds are insufficient. Your balance is still {account_balance}")
+       exit()
+
+
+
+
+print("There are 150 packs of painkillers available. One pack goes for $3")
+
+total_painkillers = int(input("How many units of painkillers would you like?: "))
+
+painkillers_unit_cost = 3
+total_painkillers_cost = total_painkillers * painkillers_unit_cost
+
+if total_painkillers_cost <= account_balance:
+        account_balance = account_balance - total_painkillers_cost 
+        print(f"Balance so far: {account_balance}")
+else:
+    print(f"Sorry, your funds are insufficient. Your balance is still {account_balance}")
+ 
+    #ask again
+
+    total_painkillers_1 = int(input("How many units of painkillers would you like?: "))
+
+    painkillers_unit_cost = 3
+    total_painkillers_cost = total_painkillers_1 * painkillers_unit_cost
+
+    if total_painkillers_cost <= account_balance:
+           account_balance = account_balance - total_painkillers_cost 
+           print(f"Balance so far: {account_balance}")
+    else:
+       print(f"Sorry, your funds are insufficient. Your balance is still {account_balance}")
+       exit()
+
+
+
+print("There are 100 packs of gauze available. One pack goes for $3")
+
+total_gauze = int(input("How many units of gauze would you like?: "))
+
+gauze_unit_cost = 3
+total_gauze_cost = total_gauze * gauze_unit_cost
+
+if total_gauze_cost <= account_balance:
+        account_balance = account_balance - total_gauze_cost
+        print(f"Balance so far: {account_balance}")
+else:
+    print(f"Sorry, your funds are insufficient. Your balance is still {account_balance}")
+
+    #ask again
+
+    total_gauze_1 = int(input("How many units of gauze would you like?: "))
+
+    gauze_unit_cost = 3
+    total_gauze_cost = total_gauze_1 * gauze_unit_cost
+
+    if total_gauze_cost <= account_balance:
+           account_balance = account_balance - total_gauze_cost
+           print(f"Balance so far: {account_balance}")
+    else:
+       print(f"Sorry, your funds are insufficient. Your balance is still {account_balance}")
+       exit()
+    
+#Asking the player to pick sub_location depending on if they choose select cities.
+
+sub_locations = "If you choose Lagos or Port-Harcourt as your starting location, you have the option of beginning in one of two sub-locations in each city depending on what you prefer. In Lagos, you have Surulere (holds more people) or Osapa London (holds less people) and in Port-Harcourt, you have GRA (a safer environment) or Eneka (a developing environment which is less safe)."
+
+print(sub_locations)
+
+if location_choice.lower() == "lagos":
+	sub_location_choice = input("What sub-location would you like to start off in? ")
+	
+	
+	if sub_location_choice.lower() == "surulere":
+                print("Surulere it is!")
+	elif sub_location_choice.lower() == "osapa london":
+                print("Osapa London it is!")
+	else:
+	    print(f"Bad syntax.")
+	    #ask again
+	    sub_location_choice_1 = input("What sub-location would you like to start off in? ")
+	
+	    if sub_location_choice_1.lower() == "surulere":
+                  print("Surulere it is!")
+	    elif sub_location_choice_1.lower() == "osapa london":
+                  print("Osapa London it is!")
+	    else:
+	       print(f"Bad syntax.")
+	       exit()
+
+	
+
+elif location_choice.lower() == "port-harcourt":
+	sub_location_choice = input("What sub-location would you like to start off in? ")
+	
+	if sub_location_choice.lower() == "gra":
+                print("GRA it is!")
+	elif sub_location_choice.lower() == "eneka":
+                print("Eneka it is!")
+	else:
+	    print(f"Bad syntax.")
+	    #ask again
+	    sub_location_choice_2 = input("What sub-location would you like to start off in? ")
+	
+	    if sub_location_choice_2.lower() == "gra":
+                  print("GRA it is!")
+	    elif sub_location_choice_2.lower() == "eneka":
+                  print("Eneka it is!")
+	    else:
+	       print(f"Bad syntax.")
+	    exit()
+
+
+
+
+
+
+
+
+
+my_library.hold_surf(3000)
